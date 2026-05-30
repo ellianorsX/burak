@@ -27,3 +27,20 @@ def getSquareNumbers(numbers):
 
 
 print(getSquareNumbers([1, 2, 3, 4, 5]));
+
+
+
+
+print("==========MI-TASK 14N ============")
+
+def palindrom_check(string):
+    string = string.lower()
+    
+    reversed_string = string[::-1]
+    
+    return string ==reversed_string
+
+print(palindrom_check("python"));
+print(palindrom_check("lool"));
+    
+    
