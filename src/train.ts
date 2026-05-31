@@ -19,15 +19,29 @@
 
 //print("==========MI-TASK 14N ============")
 
-function palindromCheck(srt: string): boolean {
-  //stringni reverse qilish orqali haqiiqy matn bilan taqqoslaymaiz
+// function palindromCheck(srt: string): boolean {
+//   //stringni reverse qilish orqali haqiiqy matn bilan taqqoslaymaiz
 
-  const cleaned: string = srt.toLowerCase();
-  const reversed: string = cleaned.split("").reverse().join("");
+//   const cleaned: string = srt.toLowerCase();
+//   const reversed: string = cleaned.split("").reverse().join("");
 
-  return cleaned === reversed;
-}
+//   return cleaned === reversed;
+// }
 
-console.log(palindromCheck("pop"));
-console.log(palindromCheck("jazz"));
-console.log(palindromCheck("rock"));
+// console.log(palindromCheck("pop"));
+// console.log(palindromCheck("jazz"));
+// console.log(palindromCheck("rock"));
+
+//========================================================================================
+
+/* 
+Project Standarts
+  -Logging standarts
+  -Naming standarts:
+      function, method, variable => CAMEL
+      class => PASCAL
+      folder => KEBAB
+      css => SNAKE
+    Error handling
+
+*/
