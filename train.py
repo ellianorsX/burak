@@ -44,3 +44,25 @@ print(palindrom_check("python"));
 print(palindrom_check("lool"));
     
     
+print("==========MI-TASK 15O ============")
+
+def calculateSumOfNumber(arr):
+    total = 0
+    
+    for item in arr:
+        if type(item) == int:
+            total = total + item
+            
+        elif type(item) == float:
+            total = total + item
+            
+            
+        else:
+            pass
+        
+        
+    return total
+
+arr = [8, "99", '11', 1]
+
+print(calculateSumOfNumber(arr))
