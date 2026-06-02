@@ -45,3 +45,9 @@ Project Standarts
     Error handling
 
 */
+
+/**
+ 1-Traditional API
+ 2-Rest API
+ 3-GraphQL API
+ */
