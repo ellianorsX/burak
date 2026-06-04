@@ -66,3 +66,17 @@ def calculateSumOfNumber(arr):
 arr = [8, "99", '11', 1]
 
 print(calculateSumOfNumber(arr))
+
+
+
+print("==========MI-TASK 16P ============")
+
+def objectToArray(obj):
+    result = []
+    
+    for key in obj:
+        result.append([key, obj[key]])
+        
+    return result 
+
+print(objectToArray({"a": 8, "f": 99, "u": 23}));   
