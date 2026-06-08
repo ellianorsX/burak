@@ -82,15 +82,41 @@
 # print(objectToArray({"a": 8, "f": 99, "u": 23}));   
 
 
-print("==========MI-TASK 17Q ============")
+# print("==========MI-TASK 17Q ============")
 
-def hasProperty(obj: dict, prop: str) -> bool:
-    if prop in obj:
-        return True
-    else:
-        return False
+# def hasProperty(obj: dict, prop: str) -> bool:
+#     if prop in obj:
+#         return True
+#     else:
+#         return False
     
     
-print(hasProperty({"job": "AI AGENT"}, "job"))   
-print(hasProperty({"job": "AI AGENT"}, "hobby")) 
-print(hasProperty({"phone": "Iphone"}, "earphone"))
+# print(hasProperty({"job": "AI AGENT"}, "job"))   
+# print(hasProperty({"job": "AI AGENT"}, "hobby")) 
+# print(hasProperty({"phone": "Iphone"}, "earphone"))
+
+
+print("==========MI-TASK 18R ============")
+
+def calculate(str):
+    str = str.replace(" ", " ")
+    for operator in [" + ", " - ", " * ", " / "]:
+        if operator in str:
+            data = str.split(operator)
+            a = int(data[0])
+            b = int(data[1])
+            
+            if operator == " + ":
+                return a + b
+            elif operator == " - ":
+                return a - b 
+            elif operator == " * ":
+                return a * b
+            elif operator == " / ":
+                return a / b 
+            
+print(calculate(str("2 * 5")))   
+
+print(calculate(str( "20 / 4" )))         
+        
+        
