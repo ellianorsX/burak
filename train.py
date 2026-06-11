@@ -96,27 +96,41 @@
 # print(hasProperty({"phone": "Iphone"}, "earphone"))
 
 
-print("==========MI-TASK 18R ============")
+# print("==========MI-TASK 18R ============")
 
-def calculate(str):
-    str = str.replace(" ", " ")
-    for operator in [" + ", " - ", " * ", " / "]:
-        if operator in str:
-            data = str.split(operator)
-            a = int(data[0])
-            b = int(data[1])
+# def calculate(str):
+#     str = str.replace(" ", " ")
+#     for operator in [" + ", " - ", " * ", " / "]:
+#         if operator in str:
+#             data = str.split(operator)
+#             a = int(data[0])
+#             b = int(data[1])
             
-            if operator == " + ":
-                return a + b
-            elif operator == " - ":
-                return a - b 
-            elif operator == " * ":
-                return a * b
-            elif operator == " / ":
-                return a / b 
+#             if operator == " + ":
+#                 return a + b
+#             elif operator == " - ":
+#                 return a - b 
+#             elif operator == " * ":
+#                 return a * b
+#             elif operator == " / ":
+#                 return a / b 
             
-print(calculate(str("2 * 5")))   
+# print(calculate(str("2 * 5")))   
 
-print(calculate(str( "20 / 4" )))         
+# print(calculate(str( "20 / 4" )))         
         
         
+        
+print("==========MI-TASK 19S ============")
+
+def forgetNumber(arr):
+    num = len(arr)
+    
+    
+    for i in range( num + 1 ):
+        if i not in arr:
+            return i
+        
+
+print(forgetNumber([1, 3, 0])) 
+print(forgetNumber([4, 0, 3,]))       
