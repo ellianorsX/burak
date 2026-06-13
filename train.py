@@ -133,4 +133,4 @@ def forgetNumber(arr):
         
 
 print(forgetNumber([1, 3, 0])) 
-print(forgetNumber([4, 0, 3,]))       
+print(forgetNumber([4, 0, 3]))       
