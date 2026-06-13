@@ -121,16 +121,39 @@
         
         
         
-print("==========MI-TASK 19S ============")
+# print("==========MI-TASK 19S ============")
 
-def forgetNumber(arr):
-    num = len(arr)
+# def forgetNumber(arr):
+#     num = len(arr)
     
     
-    for i in range( num + 1 ):
-        if i not in arr:
-            return i
+#     for i in range( num + 1 ):
+#         if i not in arr:
+#             return i
         
 
-print(forgetNumber([1, 3, 0])) 
-print(forgetNumber([4, 0, 3]))       
+# print(forgetNumber([1, 3, 0])) 
+# print(forgetNumber([4, 0, 3]))       
+
+
+print("==========MI-TASK 20T ============")
+
+def birlashishToArray(arr1, arr2):
+    result = []
+    i = 0
+    m = 0
+    
+    while i < len(arr1) and m < len(arr2):
+        if arr1[i] <= arr2[m]:
+            result.append(arr1[i])
+            i += 1
+        else:
+            result.append(arr2[m])
+            m += 1
+ 
+    result.extend(arr1[i:])
+    result.extend(arr2[m:]) 
+           
+    return result    
+
+print(birlashishToArray([1, 4, 5, 6], [7, 8, 9]))
