@@ -51,3 +51,19 @@ Project Standarts
  2-Rest API
  3-GraphQL API
  */
+
+/* Frontend Development:
+  Traditional FD   =>  SSR  =>  EJS
+  Modern FD        =>  SPA  =>  REACT
+*/
+
+/* Cookies:
+  request join
+  self destroy
+*/
+
+/* Validation:
+  Frontend validation
+  Backend validation
+  Database validation
+*/
