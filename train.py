@@ -136,24 +136,43 @@
 # print(forgetNumber([4, 0, 3]))       
 
 
-print("==========MI-TASK 20T ============")
+# print("==========MI-TASK 20T ============")
 
-def birlashishToArray(arr1, arr2):
-    result = []
-    i = 0
-    m = 0
+# def birlashishToArray(arr1, arr2):
+#     result = []
+#     i = 0
+#     m = 0
     
-    while i < len(arr1) and m < len(arr2):
-        if arr1[i] <= arr2[m]:
-            result.append(arr1[i])
-            i += 1
-        else:
-            result.append(arr2[m])
-            m += 1
+#     while i < len(arr1) and m < len(arr2):
+#         if arr1[i] <= arr2[m]:
+#             result.append(arr1[i])
+#             i += 1
+#         else:
+#             result.append(arr2[m])
+#             m += 1
  
-    result.extend(arr1[i:])
-    result.extend(arr2[m:]) 
+#     result.extend(arr1[i:])
+#     result.extend(arr2[m:]) 
            
-    return result    
+#     return result    
 
-print(birlashishToArray([1, 4, 5, 6], [7, 8, 9]))
+# print(birlashishToArray([1, 4, 5, 6], [7, 8, 9]))
+
+
+
+print("==========MI-TASK 21V ============")
+
+def countChars(str):
+    result = {}
+    
+    for EveryVerb in str:
+        if EveryVerb in result:
+            result[EveryVerb] = result[EveryVerb] + 1
+    
+        else:
+            result[EveryVerb] = 1
+        
+    return result
+
+print(countChars("respect")),
+print(countChars("congratulation!"))
