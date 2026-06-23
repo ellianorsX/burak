@@ -50,7 +50,7 @@ function validateSignupForm() {
   const memberImage =
     memberImageFiles.length > 0 ? memberImageFiles[0].name : null;
   if (!memberImage) {
-    alert("Please insert resturant image");
+    alert("Please insert restaurant image");
     return false;
   }
 }
