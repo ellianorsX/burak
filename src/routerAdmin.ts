@@ -27,7 +27,7 @@ routerAdmin.get("/check-me", restaurantController.checkAuthSession);
 /**PRODUCT */
 routerAdmin.get(
   "/product/all",
-  restaurantController.verifyRestaurant,
+  restaurantController.verifyRestaurant, //midleware
   productController.getAllProducts,
 );
 routerAdmin.post(
