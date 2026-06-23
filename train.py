@@ -160,19 +160,39 @@
 
 
 
-print("==========MI-TASK 21V ============")
+# print("==========MI-TASK 21V ============")
 
-def countChars(str):
-    result = {}
+# def countChars(str):
+#     result = {}
     
-    for EveryVerb in str:
-        if EveryVerb in result:
-            result[EveryVerb] = result[EveryVerb] + 1
+#     for EveryVerb in str:
+#         if EveryVerb in result:
+#             result[EveryVerb] = result[EveryVerb] + 1
     
-        else:
-            result[EveryVerb] = 1
+#         else:
+#             result[EveryVerb] = 1
         
-    return result
+#     return result
 
-print(countChars("respect")),
-print(countChars("congratulation!"))
+# print(countChars("respect")),
+# print(countChars("congratulation!"))
+
+
+print("==========MI-TASK 22W ============")
+
+def slays_array(nums, size):
+    result = []
+    
+    for i in range(0, 2, 4):
+        slays = nums[ i : i + size]
+        
+        result.append(slays)
+        
+        return result
+    
+print(slays_array([1,2,3,4,5,6,7,8,9], 3))
+
+print(slays_array([2,4,6,7,8], 1))
+        
+        
+        
