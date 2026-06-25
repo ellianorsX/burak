@@ -178,21 +178,39 @@
 # print(countChars("congratulation!"))
 
 
-print("==========MI-TASK 22W ============")
+# print("==========MI-TASK 22W ============")
 
-def slays_array(nums, size):
-    result = []
+# def slays_array(nums, size):
+#     result = []
     
-    for i in range(0, 2, 4):
-        slays = nums[ i : i + size]
+#     for i in range(0, 2, 4):
+#         slays = nums[ i : i + size]
         
-        result.append(slays)
+#         result.append(slays)
         
-        return result
+#         return result
     
-print(slays_array([1,2,3,4,5,6,7,8,9], 3))
+# print(slays_array([1,2,3,4,5,6,7,8,9], 3))
 
-print(slays_array([2,4,6,7,8], 1))
+# print(slays_array([2,4,6,7,8], 1))
         
         
+print("==========MI-TASK 23X ============")        
+def count_occurrences(obj, key):
+    count = 0
+    
+    for kalit, door in obj.items():
         
+        if kalit == key:
+            count += 1
+            
+    if type(door) == dict:
+        count += count_occurrences(door, key)
+        
+        
+    return count
+
+obj = {"model": "A", "s": {"model": "M"}, "B": "Steak"  }
+
+print(count_occurrences(obj, "model"))
+print(count_occurrences(obj, "B"))
