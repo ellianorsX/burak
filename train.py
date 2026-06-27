@@ -195,22 +195,35 @@
 # print(slays_array([2,4,6,7,8], 1))
         
         
-print("==========MI-TASK 23X ============")        
-def count_occurrences(obj, key):
-    count = 0
+# print("==========MI-TASK 23X ============")        
+# def count_occurrences(obj, key):
+#     count = 0
     
-    for kalit, door in obj.items():
+#     for kalit, door in obj.items():
         
-        if kalit == key:
-            count += 1
+#         if kalit == key:
+#             count += 1
             
-    if type(door) == dict:
-        count += count_occurrences(door, key)
+#     if type(door) == dict:
+#         count += count_occurrences(door, key)
         
         
-    return count
+#     return count
 
-obj = {"model": "A", "s": {"model": "M"}, "B": "Steak"  }
+# obj = {"model": "A", "s": {"model": "M"}, "B": "Steak"  }
 
-print(count_occurrences(obj, "model"))
-print(count_occurrences(obj, "B"))
+# print(count_occurrences(obj, "model"))
+# print(count_occurrences(obj, "B"))
+
+print("==========MI-TASK 24Y ============")
+
+def findInterSection(menu1, menu2):
+    result = []
+    for data in menu1:
+        if data in menu2:
+            result.append(data)
+    
+    return result
+
+print(findInterSection([22, 53, 57], [53, 30, 57]))        
+            
