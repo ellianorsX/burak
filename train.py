@@ -215,15 +215,30 @@
 # print(count_occurrences(obj, "model"))
 # print(count_occurrences(obj, "B"))
 
-print("==========MI-TASK 24Y ============")
+# print("==========MI-TASK 24Y ============")
 
-def findInterSection(menu1, menu2):
-    result = []
-    for data in menu1:
-        if data in menu2:
-            result.append(data)
+# def findInterSection(menu1, menu2):
+#     result = []
+#     for data in menu1:
+#         if data in menu2:
+#             result.append(data)
     
+#     return result
+
+# print(findInterSection([22, 53, 57], [53, 30, 57]))   
+     
+            
+print("==========MI-TASK 25Z ============")    
+ 
+def sumEvens(number):
+    result = []
+    for son in number:
+        if son % 2 == 0:
+            result.append(son) 
     return result
 
-print(findInterSection([22, 53, 57], [53, 30, 57]))        
-            
+
+print(sumEvens([1,3,5,2,8,9,4]))
+print(sumEvens([12,13,19,66]))
+             
+       
