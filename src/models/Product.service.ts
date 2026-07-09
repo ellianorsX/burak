@@ -1,5 +1,7 @@
 import { shapeIntoMongooseObjectId } from "../libs/config";
+import { ObjectId } from "mongoose";
 import { ProductStatus } from "../libs/enums/product.enum";
+import { ViewGroup } from "../libs/enums/view.enum";
 import Errors, { HttpCode, Message } from "../libs/Error";
 import { T } from "../libs/types/common";
 import {
@@ -8,13 +10,17 @@ import {
   ProductInquiry,
   ProductUpdateInput,
 } from "../libs/types/product";
+import { ViewInput } from "../libs/types/view";
 import ProductModel from "../schema/Product.model";
+import ViewService from "../schema/View.service";
 
 class ProductService {
   private readonly productModel;
+  private readonly viewService;
 
   constructor() {
     this.productModel = ProductModel;
+    this.viewService = new ViewService();
   }
 
   /** SPA */
@@ -47,7 +53,7 @@ class ProductService {
   }
 
   public async getProduct(
-    memberId: Object | null,
+    memberId: ObjectId | null,
     id: string,
   ): Promise<Product> {
     const productId = shapeIntoMongooseObjectId(id);
@@ -60,7 +66,30 @@ class ProductService {
       .exec();
     if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
 
-    // TODO: If authenticated users => first => view log creation
+    if (memberId) {
+      // Check View Log Existence
+      const input: ViewInput = {
+        memberId: memberId,
+        viewRefId: productId,
+        viewGroup: ViewGroup.PRODUCT,
+      };
+      const existView = await this.viewService.checkViewExistence(input);
+
+      // Insert New View Log
+      if (!existView) {
+        console.log("PLANNING TO INSERT NEW VIEW");
+        await this.viewService.insertMemberView(input);
+      }
+
+      // Increase Target View
+      result = await this.productModel
+        .findByIdAndUpdate(
+          productId,
+          { $inc: { productViews: +1 } },
+          { new: true },
+        )
+        .exec();
+    }
 
     return result;
   }
